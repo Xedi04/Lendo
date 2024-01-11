@@ -113,12 +113,51 @@ nav .navbar ul li button {
   font-size: 37px;
   font-weight: 300;
 }
+.services .s-all #sort {
+  width: 200px;
+  padding: 25px;
+  background-color: #E61818;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: auto;
+}
 .services .s-all .s-2 {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+}
+.services .s-all .s-2 form {
+  width: 50%;
+  margin: auto;
+  background-color: bisque;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+}
+.services .s-all .s-2 form input {
+  padding: 10px 0;
+  outline: none;
+}
+.services .s-all .s-2 form #imgdiv {
+  width: 40%;
+}
+.services .s-all .s-2 form #submit {
+  width: 200px;
+  padding: 25px;
+  background-color: #E61818;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
 .services .s-all .s-2 .div4 {
   width: 23%;
@@ -297,4 +336,4 @@ nav .navbar ul li button {
     padding: 50px;
     padding-right: 30px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.CSS.map */

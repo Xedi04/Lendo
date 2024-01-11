@@ -103,10 +103,35 @@ nav {
                 font-weight: 300;
             }
         }
-
+#sort{
+    @include btn;
+    margin: auto;
+}
         .s-2 {
             @include mini;
             justify-content: space-between;
+
+            form{
+                width: 50%;
+                margin: auto;
+                background-color:bisque;
+                color: white;
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 50px;
+                input{
+                    padding: 10px 0;
+                    outline: none;
+                }
+                #imgdiv{
+                    width: 40%
+                }
+                #submit{
+                    @include btn;
+                }
+            }
 
             .div4 {
                 width: 23%;
