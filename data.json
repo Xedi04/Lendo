@@ -1,0 +1,28 @@
+{
+    "Lendo":[
+        {
+            "id":1,
+            "image":"./assets/image/services1.svg",
+            "name":"Power and Energ",
+            "des":"Learn More"
+        },
+        {
+            "id":2,
+            "image":"./assets/image/services2.svg",
+            "name":"Power and Energ",
+            "des":"Learn More"
+        },
+        {
+            "id":3,
+            "image":"./assets/image/services3.svg",
+            "name":"Power and Energ",
+            "des":"Learn More"
+        },
+        {
+            "id":4,
+            "image":"./assets/image/services4.svg",
+            "name":"Power and Energ",
+            "des":"Learn More"
+        }
+    ]
+}

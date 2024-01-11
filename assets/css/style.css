@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 32px;
+  margin: auto;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+nav .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: white;
+}
+nav .navbar ul li {
+  cursor: pointer;
+}
+nav .navbar ul li i {
+  font-size: 22px;
+}
+nav .navbar ul li button {
+  width: 200px;
+  padding: 25px;
+  background-color: #E61818;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://preview.colorlib.com/theme/lendo/assets/img/hero/h1_hero.jpg.webp");
+  background-position: center;
+  background-size: cover;
+}
+.banner .b-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0;
+}
+.banner .b-all .b-head {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  text-align: center;
+}
+.banner .b-all .b-head h1 {
+  font-size: 50px;
+}
+.banner .b-all .b-head p {
+  font-size: 20px;
+}
+.banner .b-all .b-head button {
+  width: 200px;
+  padding: 25px;
+  background-color: #E61818;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 250px;
+}
+
+.services {
+  width: 100%;
+}
+.services .s-all {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 0;
+}
+.services .s-all .s-1 {
+  width: 43%;
+}
+.services .s-all .s-1 h2 {
+  font-size: 37px;
+  font-weight: 300;
+}
+.services .s-all .s-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.services .s-all .s-2 .div4 {
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  transition: all 0.5 ease;
+}
+.services .s-all .s-2 .div4:hover {
+  background-color: rgb(225, 228, 231);
+}
+.services .s-all .s-2 .div4:hover .text p {
+  visibility: visible;
+}
+.services .s-all .s-2 .div4 .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .s-all .s-2 .div4 .img img {
+  width: 25%;
+}
+.services .s-all .s-2 .div4 .text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.services .s-all .s-2 .div4 .text h4 {
+  font-size: 18px;
+}
+.services .s-all .s-2 .div4 .text p {
+  font-size: 14px;
+  color: #E61818;
+  visibility: hidden;
+}
+
+.plan {
+  width: 100%;
+  background-image: url("https://preview.colorlib.com/theme/lendo/assets/img/gallery/section-bg1.jpg.webp");
+  background-position: center;
+  background-size: cover;
+}
+.plan .p-all {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 70px 0;
+}
+.plan .p-all .p-head {
+  width: 80%;
+  background-color: white;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.plan .p-all .p-head h2 {
+  font-size: 33px;
+  font-weight: 300;
+}
+.plan .p-all .p-head p {
+  color: gray;
+}
+.plan .p-all .p-head button {
+  width: 200px;
+  padding: 25px;
+  background-color: #E61818;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 990px) {
+  nav .container {
+    max-width: 800px;
+  }
+  nav .container .navbar ul {
+    display: none;
+  }
+  .banner .container {
+    max-width: 800px;
+  }
+  .banner .container .b-all .b-head {
+    width: 90%;
+  }
+  .services .container {
+    max-width: 800px;
+  }
+  .services .container .s-all .s-1 {
+    width: 70%;
+  }
+  .services .container .s-all .s-2 {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .services .container .s-all .s-2 .div4 {
+    width: 31.5%;
+  }
+  .plan .p-all .p-head {
+    padding: 40px 70px;
+  }
+  .plan .p-all .p-head h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .container {
+    max-width: 550px;
+  }
+  .banner .container {
+    max-width: 550px;
+  }
+  .banner .container .b-all .b-head {
+    width: 100%;
+  }
+  .banner .container .b-all .b-head h1 {
+    font-size: 32px;
+  }
+  .services .container {
+    max-width: 550px;
+  }
+  .services .container .s-all .s-1 {
+    width: 100%;
+  }
+  .services .container .s-all .s-1 h2 {
+    font-size: 30px;
+  }
+  .services .container .s-all .s-2 .div4 {
+    width: 47.5%;
+  }
+  .services .container .s-all .s-2 .div4 .img img {
+    width: 30%;
+  }
+  .plan .p-all .p-head {
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  nav .container {
+    padding: 0 10px;
+  }
+  .banner .container {
+    padding: 0 10px;
+  }
+  .services .container {
+    padding: 0 10px;
+  }
+  .services .container .s-all .s-1 {
+    width: 80%;
+  }
+  .services .container .s-all .s-1 h2 {
+    font-size: 22px;
+  }
+  .services .container .s-all .s-2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .services .container .s-all .s-2 .div4 {
+    width: 100%;
+  }
+  .services .container .s-all .s-2 .div4 .img img {
+    width: 10%;
+  }
+  .plan .p-all .p-head {
+    width: 95%;
+    padding: 50px;
+    padding-right: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */

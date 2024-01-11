@@ -1,0 +1,347 @@
+@import "./variables";
+@import "./mixin/mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 32px;
+    margin: auto;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+
+    .navbar {
+        @include mini;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            @include flex;
+            gap: 40px;
+            color: white;
+
+            li {
+                i {
+                    font-size: 22px;
+                }
+
+                cursor: pointer;
+
+                button {
+                    @include btn;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://preview.colorlib.com/theme/lendo/assets/img/hero/h1_hero.jpg.webp");
+    background-position: center;
+    background-size: cover;
+
+    .b-all {
+        @include mini;
+        padding: 200px 0;
+
+        .b-head {
+            width: 60%;
+            @include flex;
+            flex-direction: column;
+            gap: 40px;
+            color: white;
+            text-align: center;
+
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            button {
+                @include btn;
+                width: 250px;
+            }
+        }
+    }
+}
+
+.services {
+    width: 100%;
+
+    .s-all {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px 0;
+
+        .s-1 {
+            width: 43%;
+
+            h2 {
+                font-size: 37px;
+                font-weight: 300;
+            }
+        }
+
+        .s-2 {
+            @include mini;
+            justify-content: space-between;
+
+            .div4 {
+                width: 23%;
+                @include flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px;
+                transition: all .5 ease;
+
+                &:hover {
+                    background-color: rgb(225, 228, 231);
+                   .text{
+                    p {
+                        visibility: visible;
+                    }
+                   }
+                }
+
+                .img {
+                    width: 100%;
+                    @include flex;
+
+                    img {
+                        width: 25%;
+                    }
+                }
+
+                .text {
+                    @include mini;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    h4 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: $red;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.plan{
+    width: 100%;
+    background-image:url("https://preview.colorlib.com/theme/lendo/assets/img/gallery/section-bg1.jpg.webp");
+    background-position: center;
+    background-size: cover;
+    .p-all{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 70px 0;
+        .p-head{
+            width: 80%;
+            background-color: white;
+            padding:100px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h2{
+                font-size: 33px;
+                font-weight: 300;
+            }
+            p{
+                color: gray;
+            }
+            button{
+                @include btn;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    nav {
+        .container {
+            max-width: 800px;
+
+            .navbar {
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .banner {
+        .container {
+            max-width: 800px;
+
+            .b-all {
+                .b-head {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    .services{
+        .container{
+            max-width: 800px;
+            .s-all{
+                .s-1{
+                    width: 70%;
+                }
+                .s-2{
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    .div4{
+                        width: 31.5%;
+                    }
+                }
+            }
+        }
+    }
+
+    .plan{
+        .p-all{
+            .p-head{
+                padding: 40px 70px;
+                h2{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        .container {
+            max-width: 550px;
+        }
+    }
+
+    .banner {
+        .container {
+            max-width: 550px;
+
+            .b-all {
+                .b-head {
+                    width: 100%;
+
+                    h1 {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services{
+        .container{
+            max-width: 550px;
+            .s-all{
+                .s-1{
+                    width: 100%;
+                    h2{
+                        font-size: 30px;
+                    }
+                }
+                .s-2{
+                    .div4{
+                      width: 47.5%;
+                        .img{
+                            img{
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .plan{
+        .p-all{
+            .p-head{
+                padding-right: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    nav {
+        .container {
+            padding: 0 10px;
+        }
+    }
+
+    .banner {
+        .container {
+            padding: 0 10px;
+        }
+    }
+    .services{
+        .container{
+            padding: 0 10px;
+            .s-all{
+                .s-1{
+                    width: 80%;
+                   h2{
+                    font-size: 22px;
+                   }
+                }
+                .s-2{
+                    flex-direction: column;
+                    gap: 30px;
+                    .div4{
+                        width: 100%;
+                        .img{
+                            img{
+                                width: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .plan{
+        .p-all{
+            .p-head{
+                width: 95%;
+                padding: 50px;
+                padding-right: 30px;
+            }
+        }
+    }
+}
